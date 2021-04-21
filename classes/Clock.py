@@ -32,17 +32,18 @@ class Clock:
             self.second -= 60
             self.minutes += 1
             if self.minutes >= 60:
-               self.minutes -= 60
-               self.hour += 1
+                self.minutes -= 60
+                self.hour += 1
 
         self.hour = self.hour % 12
+
 
 a = Clock(7, 13, 72)
 b = Clock(9, 45, 19)
 a.displayClock()
 b.displayClock()
 
-(a+b).displayClock()
+(a + b).displayClock()
 
 a.addSecond(454650)
 a.displayClock()
