@@ -60,3 +60,24 @@ class Tree:
                 print("data does not exist")
                 return None
 
+    def findMaxNum(self):
+        if self._root.getData() is None:
+            return None;
+
+        ans = self._root.getData()
+        helper = self.getRoot()
+        while helper.getRight() is not None:
+            helper = helper.getRight()
+
+        return helper.getData()
+
+    def findMinNum(self):
+        if self._root.getData() is None:
+            return None;
+
+        ans = self._root.getData()
+        helper = self.getRoot()
+        while helper.getLeft() is not None:
+            helper = helper.getLeft()
+
+        return helper.getData()
